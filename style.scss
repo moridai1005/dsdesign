@@ -1,0 +1,521 @@
+$pc: 1024px; // PC
+$tab: 760px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+
+body {
+    font-family: "游ゴシック", "Yu Gothic";
+    color:#707070;
+}
+
+
+li {
+    list-style: none;
+}
+ul,.container,.container-fluid {
+    padding:0;
+    margin:0;
+}
+
+h1,h2,h3,h4,p {
+    margin:0 !important
+}
+
+.table {
+    margin:0;
+    @include sp {
+        width:90%;
+        margin:0 auto;
+    }
+    @include tab {
+        width:90%;
+        margin:0 auto;
+    }
+}
+
+h2 {
+    @include sp {
+        font-size:28px !important;
+    }
+}
+
+p ,td{
+    @include sp {
+        font-size:18px !important;
+    }
+}
+
+header {
+    width:100%;
+    height:70px;
+    background-color:white;
+
+
+
+    .navbar {
+        padding:0;
+        height:70px;
+        width:1002px;
+        margin:0 auto;
+        @include sp {
+            width:100%;
+        }
+    }
+
+    .container-fluid {
+        padding:0;
+    }
+
+    .navbar-brand {
+        padding:0;
+        margin:0;
+    }
+
+    .navbar-item {
+        margin-right:30px;
+        @include sp {
+            margin-right:0;
+        }
+
+        .nav-link {
+            padding:0 !important;
+            font-size:18px;
+        }
+
+    }
+
+    .navbar-nav {
+        @include sp {
+            text-align:right;
+        }
+    }
+
+    .navbar-toggler {
+        @include sp {
+            margin-right:5px;
+        }
+    }
+
+    .last {
+        margin:0;
+    }
+
+
+    #logo {
+        width:202px;
+        height:70px;
+    }
+}
+
+.main-visual {
+    background-image: url(kelli-tungay-2LJ4rqK2qfU-unsplash.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width:100%;
+    height:600px;
+
+    @include sp {
+        background-position:left -120px top 0px;
+        height:400px;
+    }
+
+    .content {
+        h1 {
+            font-family:Algerian;
+            font-size:60px;
+            margin:0;
+            padding-top:70px;
+            padding-bottom:16px;
+            line-height:67px;
+            @include sp {
+                font-size:40px;
+                padding-top:30px;
+            }
+        }
+
+        h2 {
+            font-weight:600;
+            font-size:42px;
+            margin:0;
+            padding-bottom:41px;
+            line-height:55px;
+            @include sp {
+                padding-bottom:20px;
+            }
+        }
+
+        h3 {
+            font-weight:600;
+            font-size:36px;
+            margin:0;
+            padding-bottom:41px;
+            line-height:52px;
+            @include sp {
+                font-size:22px;
+                padding-bottom:20px;
+            }
+        }
+
+        .btn {
+            font-size:24px;
+            font-weight:600;
+            padding:23px 64px;
+            border-radius:38px;
+            @include sp {
+                padding:15px;
+                font-size:16px;
+            }
+        }
+
+    }
+
+}//main-visual
+
+.feature {
+
+    .content {
+        width:1002px !important;
+        max-width:1280px;
+        padding:0;
+        margin:0 auto !important;
+
+        @include sp {
+            width:100% !important;
+        }
+
+    }
+
+
+    .content-first {
+
+        h2 {
+            font-weight:600;
+            padding-top:60px;
+            font-size:42px;
+            line-height:58px;
+        }
+
+        ul {
+            display:flex;
+            padding:60px 0 146px 0;
+
+            @include sp {
+                flex-direction: column;
+                padding:30px 0 60px 0;
+            }
+
+            li {
+                padding:52px 20px;
+                border-radius:50%;
+                width:201px;
+                height:201px;
+                color:white;
+                font-size:32px;
+                font-weight:600;
+                line-height:52px;
+                @include sp {
+                    margin:0 auto;
+                    margin-bottom:10px;
+                    width:150px;
+                    height:150px;
+                    font-size:24px;
+                    padding:35px 0 0 0;
+                    line-height: 40px;
+                }
+            }
+
+        }
+    }
+
+    .content-second {
+
+        padding-bottom:166px;
+        @include sp {
+            padding-bottom:80px;
+        }
+
+        h2 {
+            padding-bottom:101px;
+            font-size:36px;
+            font-weight:600;
+            line-height: 58px;
+            @include sp {
+                padding-bottom:50px;
+            }
+        }
+
+        p {
+            font-size:22px;
+            font-weight:bold;
+            margin:0;
+            line-height: 36px;
+        }
+
+        .container {
+            padding-bottom:60px;
+            .row {
+
+
+                    p {
+                        padding-left:20px;
+                        font-size:28px;
+                        font-weight:600;
+                        line-height:40px;
+                        text-align:center !important;
+                    }
+
+                    table {
+                        font-size:28px;
+                        font-weight:600;
+
+                        td {
+                            padding:0;
+                        }
+
+                    }
+
+                    .col-sm-12,.col-md-6 {
+                        padding:0;
+                    }
+                
+            }
+        }
+    }//content-second
+
+    .content-third {
+        padding-bottom:170px;
+        @include sp {
+            padding-bottom:70px;
+        }
+        .container {
+            h2 {
+                font-size:36px;
+                font-weight:600;
+                padding-bottom:120px;
+                line-height:39px;
+                @include sp {
+                    padding-bottom:60px;
+                }
+            }
+            p {
+                font-size:28px;
+                font-weight:600;
+                line-height:45px;
+            }
+        }
+    }//content-third
+
+    .content-fourth {
+
+        padding-bottom:137px;
+        @include sp {
+            padding-bottom:65px;
+        }
+
+        h2 {
+            padding-bottom:102px;
+            @include sp {
+                padding-bottom:20px;
+            }
+            font-size:36px;
+            font-weight:600;
+            line-height: 31px;
+        }
+
+        .container {
+            .row {
+
+                p {
+                    font-size:36px;
+                    font-weight:600;
+                    line-height:65px;
+                    padding-top:63px;
+                    padding-left:5px;
+                    @include sp {
+                        padding-top:30px;
+                    }
+                }
+
+                table {
+                    font-size:28px;
+                    font-weight:600;
+
+                    td {
+                        padding:0;
+                    }
+
+                }
+
+                .col-sm-12,.col-md-6 {
+                    padding:0;
+                }
+
+                
+
+            }
+        }
+    }//content-fourth
+
+}//feature
+
+.faq {
+    height:915px;
+    width:100%;
+    @include sp {
+        height:600px;
+    }
+
+    h2 {
+        font-size:42px;
+        font-weight:600;
+        line-height:68px;
+        color:white;
+        padding:118px 0 38px 0;
+    }
+
+    .faq-list {
+        width:658px;
+        height:645px;
+        margin:0 auto;
+
+        @include sp {
+            width:95%;
+            height:300px;
+        }
+
+        .card {
+            button {
+                text-decoration:none;
+                color:#707070 !important;
+                font-size:24px;
+                font-weight:600;
+                line-height:39px;
+                align-items: center;
+                @include sp {
+                    font-size:18px !important;
+                }
+            }
+
+            .card-body {
+                font-size:24px;
+                font-weight:600;
+                align-items: center;
+                @include sp {
+                    font-size:18px !important;
+                }
+            }
+
+        }
+
+    }
+
+}//faq
+
+.contact {
+
+    padding-bottom:90px;
+
+    h2 {
+        font-size:42px;
+        font-weight:600;
+        line-height:68px;
+        padding:100px 0 37px 0;
+    }
+
+    .contact-form {
+
+        width:830px;
+        height:844px;
+        padding:40px 92px 83px 86px;
+        border-radius:15px;
+
+
+        @include sp {
+            width:95%;
+            margin:0 auto;
+            padding:15px;
+        }
+
+        p {
+            color:white;
+            font-size:24px;
+            font-weight:600;
+            padding-bottom:47px;
+            line-height: 36px;
+        }
+
+        input {
+            width:658px;
+            height:36px;
+            border-radius: 10px;
+            margin-bottom:47px;
+            box-shadow: none;
+            border:none;
+            @include sp {
+                width:95%;
+            }
+        }
+        textarea {
+            width:658px;
+            height:215px;
+            border-radius: 10px;
+            margin-bottom:47px;
+            border:none;
+            @include sp {
+                width:95%;
+            }
+        }
+
+        .submit-btn {
+            color:white;
+            font-size:24px;
+            font-weight:600;
+
+            input {
+                background-color:white;
+                border-radius:38px;
+                color:#707070;
+                padding:0;
+                width:295px;
+                height:62px;
+                font-weight:600;
+                font-size:24px;
+            }
+
+        }
+
+    }
+
+}//contact
+
+
+footer {
+
+    .wrap {
+
+        p {
+            color:white;
+            font-size:24px;
+            font-weight:600;
+            padding:22px 0;
+            line-height: 19px;
+        }
+    }
+}
